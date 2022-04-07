@@ -50,7 +50,7 @@ SHELL ["conda", "run", "-n", "reinforcement_learning", "/bin/bash", "-c"]
 RUN conda install pytorch cudatoolkit=10.2 -c pytorch
 RUN conda install -c conda-forge matplotlib==3.4.1
 RUN conda install -c conda-forge jupyter==1.0.0
-RUN conda install -c conda-forge jupyter_contrib_nbextensions==0.5.1
+RUN pip install jupyter_contrib_nbextensions
 
 RUN jupyter nbextension disable contrib_nbextensions_help_item/main && \
     jupyter nbextension disable nbextensions_configurator/config_menu/main && \
